@@ -2,3 +2,24 @@ baseURL = "test.catonacomputer.com"
 languageCode = "en-us"
 title = "Cat on a Computer"
 theme = "hugo-theme-dream"
+
+enableRobotsTXT = true
+
+[params]
+  author = "Sarah Christoff"
+  motto = "Breaking Things and Learning Fast"
+  #description = ""
+  avatar = "/broken.jpeg"
+
+  # email = ""
+  github = "https://github.com/s-christoff"
+  # linkedin = ""
+  # codepen = ""
+  # stackoverflow = ""
+
+  siteStartYear = 2018
+  aboutHeader = "AboutMe"
+
+  paginate = 4
+
+  # favicon = "/favicon.ico"
