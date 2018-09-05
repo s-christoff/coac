@@ -9,17 +9,17 @@ enableRobotsTXT = true
   author = "Sarah Christoff"
   motto = "Breaking Things and Learning Fast"
   #description = ""
-  avatar = "/broken.jpeg"
+  avatar = "/img/me.png"
 
-  # email = ""
-  github = "https://github.com/s-christoff"
-  # linkedin = ""
+  email = "sarah.christoff13@gmail.com"
+  github = "s-christoff"
+  linkedin = "sarahchristoff25"
   # codepen = ""
   # stackoverflow = ""
 
-  siteStartYear = 2018
+  siteStartYear = 2017
   aboutHeader = "AboutMe"
 
-  paginate = 4
+  paginate = 10
 
-  # favicon = "/favicon.ico"
+  # favicon = "/img/catonacomplogo.png"
