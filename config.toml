@@ -1,3 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "test.catonacomputer.com"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Cat on a Computer"
+theme = "hugo-theme-dream"
