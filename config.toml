@@ -1,4 +1,4 @@
-baseURL = "test.catonacomputer.com"
+baseURL = "catonacomputer.com"
 languageCode = "en-us"
 title = "Cat on a Computer"
 theme = "hugo-theme-dream"
@@ -22,4 +22,4 @@ enableRobotsTXT = true
 
   paginate = 10
 
-  # favicon = "/img/catonacomplogo.png"
+ favicon = "/img/catonacomplogo.png"
