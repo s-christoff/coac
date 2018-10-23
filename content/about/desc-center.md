@@ -3,5 +3,6 @@
 <br>
 <br>
 <br>
-<h1><img src="img/catonaheader.jpg" height="110%"></h1>
+<br>
+<h1><img src="img/sticker.png"></h1>
 
