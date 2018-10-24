@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cat on a Computer</title>
+
+  
+  
+  <meta name="author" content="Sarah Christoff" />
+  <meta name="description" content="Currently Reading: The Art of Computer Programming, Volume 4, Fascicle 1: Bitwise Tricks &amp;amp; Techniques; Binary Decision Diagrams
+Continuing off of yesterday’s blog post of Love Bit(e)s, now with the basis of binary arithmetic it’s a lot easier to understand bitwise operations!
+What is a Bitwise Operator, and why do I care? A bitwise operation manipulates bits for calculations or comparisons. They are insanely fast and efficient.
+Harvard Mark I" />
+
+
+
+<link href="/img/catonacomplogo.png" rel="shortcut icon" type="image/x-icon" />
+
+
+
+<meta name="generator" content="Hugo 0.48" />
+
+
+<link rel="canonical" href="/post/love-bites-cont/" />
+<link rel="alternative" href="/index.xml" title="Cat on a Computer" type="application/atom+xml" />
+
+<link href="https://cdn.bootcss.com/semantic-ui/2.2.14/semantic.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="/css/site.css" />
+
+
+</head>
+
+<body>
+  <div class="flip-container">
+    <div class="flipper">
+      <section class="front">
+        
+<nav class="ui top secondary menu">
+  <div class="item">
+    <i class="inverted big link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <a href="/">
+      <i class="inverted big link home icon" title="Home"></i>
+    </a>
+  </div>
+</nav>
+ 
+<div class="ui centered grid">
+  <div class="fifteen wide mobile fifteen wide tablet eleven wide computer column post-list post-single-main">
+
+    <section class="ui secondary top attached black segment">
+      <a class="ui black right corner label" href="javascript:void(0)" onclick="savePostAsImg()">
+        <i class="save icon"></i>
+      </a>
+      <header>
+        <h1 class="ui header">
+          Love Bites (Cont.)
+          <div class="sub header">@ Sarah Christoff · Sep 28, 2014 · 5 min read · Update at Sep 28, 2014</div>
+        </h1>
+      </header>
+      <article class="post-content" style="margin-top: 2rem; font-size: 1.4rem;">
+
+<p>Currently Reading: <a href="https://www.safaribooksonline.com/library/view/the-art-of/9780321637413/">The Art of Computer Programming, Volume 4, Fascicle 1: Bitwise Tricks &amp; Techniques; Binary Decision Diagrams</a></p>
+
+<p>Continuing off of yesterday’s blog post of Love Bit(e)s, now with the basis of binary arithmetic it’s a lot easier to understand bitwise operations!</p>
+
+<h4 id="what-is-a-bitwise-operator-and-why-do-i-care">What is a Bitwise Operator, and why do I care?</h4>
+
+<p>A bitwise operation manipulates bits for calculations or comparisons. They are insanely fast and efficient.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/0*CwpCaxC3GhDrfEHn.jpg" alt="" />Harvard Mark I</p>
+
+<p>When the Harvard Mark I was built in 1944 it used bitwise operators AND, OR and XOR to do computations. Alan Turing, noted as the father of computers, when writing the manual for the Harvard Mark I elaborated on how a bitwise NOT could be gained.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/0*J4u-h0ze47CM7dTW.png" alt="" /></p>
+
+<p>These are the operators that will be covered, even though there are plenty more, we’ll keep it simple.</p>
+
+<p><em>Remember to read all these operations go from right to left!</em></p>
+
+<h4 id="and-operator">AND (&amp;) Operator</h4>
+
+<p>The AND operator compares each binary digit of two integers and returns a new integer. The AND operator does this by multiplying them, so we could see the algebraic representation of this operator as:</p>
+
+<pre><code>Z = A * B
+</code></pre>
+
+<p>The logic gate for AND would look something like:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/0*8BnqiJ8f1xmpLY-A.png" alt="" /></p>
+
+<p>To understand the AND operator, we could put it in action. Take for example the binary number 0101 which is equal to seven, and the binary number 0011, which is three.</p>
+
+<pre><code>0101AND 0011    0001
+</code></pre>
+
+<p>Starting at the rightmost integer,</p>
+
+<pre><code>1 * 1 = 1 0 * 1 = 0 1 * 0 = 0 0 * 0 = 0
+
+So, we ended up with 0001 which is equal to one. This can be typically useful in bit masking, where you want to see if only one bit is active. For example, if we wanted to clear all bits in 0101 (seven) except for the second bit, we could do so like:
+
+0101AND 0100    0100
+
+We can use the zeros like how masking tape while painting would be used, covering up the parts we don't want to see! We can also use the AND operator to check the parity (even or odd) of a number by checking it's lowest valued bit.
+
+0101AND 0001    0001
+
+Since 7 and 1 is 1, we know it is not divisible by two and therefore odd.
+
+OR (|) Operator
+
+The OR operator compares each binary digit across two integers and gives back a 1 if either of them have a 1. The algebraic expression for this looks like:
+
+Z = A + B
+
+The logic gate for OR looks like:
+</code></pre>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/0*-SqNDjdIkXC_eF_L.png" alt="" /></p>
+
+<pre><code>We can take the same example above, but just change the operator:
+
+0101OR 0100   0101
+
+Starting at the rightmost integer:
+
+1 + 0 = 10 + 0 = 01 + 1 = 1 0 + 0 = 0
+
+The OR operator is very useful in finding which values are set to 1.
+
+NOT (~) Operator
+
+The NOT operator, or complement, gives the ones' complement of a binary integer. Bits that are 0 become 1, and bits that are 1 become 0.
+
+The algebraic expression for this looks like (the sign above the A is the sign used to represent NOT):
+
+Z = Ā
+
+The logic gate for NOT looks like: (the little circle means the 1 and 0s should be flipped!):
+</code></pre>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/0*j3AW6lrILGt329Cl.png" alt="" /></p>
+
+<pre><code>If we were to take seven and try it with NOT, the output would look like:
+
+NOT 0101    1010
+
+The NOT operator could be used to help finding two's complement, which we talked about in the previous post.
+
+XOR (^) Operator
+
+The XOR operator takes takes two integers and if there is a 1 in both positions, it returns a 0, if there is only a single 1 in either position, it will return a 1, but if there is a 0 position in both positions it will return 0.
+
+The algebraic expression for this would be:
+
+Z = A
+</code></pre>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/0*H6qd1PILXqjnCdCY." alt="\\oplus \\!\\," /></p>
+
+<pre><code>B
+
+The logic gate for XOR looks like:
+</code></pre>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/0*LO-4ED9Sw4uMLicY.png" alt="" /></p>
+
+<pre><code>But the logic gate for XOR is actually a combination of AND, OR, and NOT gates:
+</code></pre>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/0*BixIxM4ZUP3HQSZH.png" alt="" /></p>
+
+<pre><code>If we preformed a XOR on two, we could do it like such:
+
+0010
+
+XOR 1010
+
+1000
+
+Preforming XOR against itself will always produce zero, which is how assembly programmers sometimes short-cutted and set the register to zero.
+
+Bit Shifts
+
+Bit shifts either move digits to the left or right. They are common due to the fact registers only have a fixed width, so some bits can be &quot;shifted out&quot; of the register in one end, while other bits are &quot;shifted in&quot; on the other. There are many types of shifts (arithmetic shifts, logical shifts, rotate no carry, etc) but for this post I'll only be covering arithmetic shifts and logical shifts.
+
+Arithmetic Shifts
+
+In an arithmetic shift the bits that are shifted out are discarded. In a left arithmetic shift, zeros are shifted in on the right.
+
+A left shift would look like:
+
+&lt;&lt; 0101 = 1010
+
+In a right arithmetic shift, the sign bit (which is in the most significant bit position, or the left most side) is shifted in on the left (therefore it does not change the sign of the value)
+
+Where a right shift would look like:
+
+&gt;&gt; 0101 = 1101
+</code></pre>
+
+<h4 id="logical-shifts">Logical Shifts</h4>
+
+<pre><code>In a logical shift, zeros are shifted in to replace bits. A logical left shift and a logical arithmetic shift are the same.
+
+&lt;&lt; 0101 = 1010
+
+Logical shifts do not care about the sign of the number, so during a right logical shift 0s are just inserted. These are ideal for signed two's complement numbers.
+
+&gt;&gt; 0101 = 0010
+
+Conclusion
+
+There are a lot of ways to change, manipulate, and calculate things in binary. The most amazing part is how insanely fast this occurs. Understanding how bits can be manipulated and calculated is like understanding atoms, and how they make up the world around us!
+
+Here's a good video on everything
+
+I used to think programming was lame and cheating, but now I just find it a useful way to avoid doing math.. except I keep ending up learning math anyways.
+</code></pre>
+</article>
+    </section>
+
+    <footer class="ui secondary attached segment dream-tags">
+      
+      <span>No Tag</span>
+      
+    </footer>
+
+    
+
+    
+
+  </div>
+  <div class="fifteen wide mobile fifteen wide tablet four wide computer column">
+
+    <section class="ui top attached center aligned inverted segment">
+  <div class="ui small circular image">
+    
+    <img src="/img/me.png">
+    
+  </div>
+  <h3 class="ui header">Sarah Christoff&#39;s blog<div class="sub header" style="color: white;">Breaking Things and Learning Fast</div>
+  </h3>
+
+  <div class="ui inverted horizontal list">
+    
+    <a class="item" href="/post">
+      <i class="archive icon" title="Archives"></i>
+    </a>
+    
+    <a class="item" href="/tags">
+      <i class="tags icon" title="All Tags"></i>
+    </a>
+    <a class="item" href="/categories">
+      <i class="inverted cubes icon" title="All Categories"></i>
+    </a>
+  </div>
+
+  <a id="tag-category-pop" class="ui red right corner label">
+    <i class="pointing down icon" title="Click this to pop tags and categories"></i>
+  </a>
+</section>
+
+
+
+
+
+<section class="ui bottom attached center aligned inverted segment">
+    
+    <p>© 2017 - 2018 Cat on a Computer</p>
+    
+    <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+</section>
+
+
+  </div>
+</div>
+
+      </section>
+      <section class="back">
+        <nav class="ui top secondary menu" style="overflow-x: auto">
+  <div class="item">
+    <i class="inverted big link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  
+  <div class="item">
+    <a href="mailto:sarah.christoff13@gmail.com">
+      <i class="inverted big mail icon" title="email"></i>
+    </a>
+  </div>
+  
+  
+  <div class="item">
+    <a href="https://github.com/s-christoff" target="_blank">
+      <i class="inverted big github icon" title="github"></i>
+    </a>
+  </div>
+  
+  
+  <div class="item">
+    <a href="https://www.linkedin.com/in/sarahchristoff25" target="_blank">
+      <i class="inverted big linkedin icon" title="linkedin"></i>
+    </a>
+  </div>
+  
+  
+  
+</nav>
+
+<div class="ui centered grid about">
+  <div class="fifteen wide mobile fifteen wide tablet fifteen wide computer column">
+
+    <section class="ui stacked segments">
+      <header class="ui inverted segment">
+        <h2 class="ui header">
+          AboutMe
+        </h2>
+      </header>
+
+      <article class="ui inverted segment back-about">
+        <div class="ui stackable three column grid">
+          <div class="column">
+              
+              <br>
+<h2> <font color="grey"><i>Some-Type-A</i></font> Systems Engineer </h2>
+<body> You can find me running through the convention center halls, or hidden in the back corners of a coffee shop piled under empty cups. <br>
+This blog&rsquo;s purpose is meant to aide me in the creation of talks, understanding and investigating the subject matter, and general exploration. If there&rsquo;s anything you&rsquo;d love to see here, let me know!  </body>
+              
+          </div>
+          <div class="column">
+              
+              <br>
+<br>
+<br>
+<br>
+<br>
+<h1><img src="img/catonaheader.jpg" height="110%"></h1>
+              
+          </div>
+          <div class="column">
+              
+              <p><h2> Talks </h2>
+<body> Feel free to reach out via e-mail if you think I would be a good speaker for a convention! </body><br>
+<h3> HashiConf 2018 </h3>
+<body> <b>Title: You. Must. Build. A. Raft </b> <br>
+<h2><a href = ../slides/youmustbuildaraft.pdf> Slides </a> <h2> <br>
+<i>Abstract:</i> Consensus is a fundamental problem in our distributed systems to achieve system reliability. Raft sets out to solve this problem, in a different approach then the first solution, Paxos. But how does Raft make this decisions, and why should anyone trust it? Come join us in breaking down and understanding Raft! </body></p>
+
+<p><h3><a href = "https://www.youtube.com/watch?v=ZHYFDV3XKQ4"> KubeCon &amp; Cloud Native Con EU 2018 </a></h3><br>
+<body><b> Title:  You Ever Wonder Why We&rsquo;re Here? </b><br>
+<h2><a href = ../slides/youeverwonderwhywerehere.pdf> Slides </a> <h2> <br>
+<i>Abstract:</i> Let&rsquo;s journey back to the 1960s, and start with the beginning of Virtual Machines. Why were these old behemoths made, and how do they work again? Let&rsquo;s recall when to use Virtual Machines, and their best practices. Then we&rsquo;ll travel to the dawn of containers, exploring their conception, birth, and where we are today. Finally, wrapping things up with figuring out why were are here, right now, at KubeCon! We&rsquo;ll unwrap Container Orchestration, container runtimes, and the many acronyms buzzing around.</body></p>
+
+<p><h3> Container World 2018</h3>
+<body> <b> Title:  From the Beginning: Hypervisors, Virtual Machines, and Containers </b><br>
+<i> Abstract: </i> Containers are nothing new to the industry, but it&rsquo;s surge in popularity have many engineers questioning the best use cases for virtual machines and containers. It&rsquo;s hard to figure out what is best for your application without understanding what the strengths of these technologies are. It&rsquo;s time to break down the barriers and understand containers, the difference between rkt and Docker, and all the acronyms buzzing through the community right now. Let&rsquo;s learn about the why&rsquo;s and whens to use virtual machines, containers, or both! </body></p>
+
+              
+          </div>
+        </div>
+      </article>
+
+      
+
+      
+      
+    </section>
+
+  </div>
+</div>
+
+      </section>
+    </div>
+  </div>
+
+  
+<script src="/js/jquery.min.js"></script>
+<script src="/js/semantic.min.js"></script>
+<script src="/js/html2canvas.min.js"></script>
+<script src="/js/bg.js"></script>
+<script src="/js/site.js"></script>
+
+
+
+</body>
+
+</html>
