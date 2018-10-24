@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cat on a Computer</title>
+
+  
+  
+  <meta name="author" content="Sarah Christoff" />
+  <meta name="description" content="Currently Reading: Site Reliability Engineering, Clean Architecture In my current struggle to learn programming, I&amp;rsquo;m trying to learn the different paradigms of programming there are. So far, we have: Structured Programming, Object Orientated Programming, Functional Programming, Procedural Programing. Let&amp;rsquo;s start from the top: Structured Programming &amp;ldquo;The art of programming is the art of organizing complexity, of mastering multitude and avoiding its bastard chaos as effectively as possible.&amp;ldquo; - Edsger Dijkstra Edsger Wybe Dijkstra was a programmer in the 1950s from the Netherlands." />
+
+
+
+<link href="/img/catonacomplogo.png" rel="shortcut icon" type="image/x-icon" />
+
+
+
+<meta name="generator" content="Hugo 0.48" />
+
+
+<link rel="canonical" href="/post/programming-paradigms/" />
+<link rel="alternative" href="/index.xml" title="Cat on a Computer" type="application/atom+xml" />
+
+<link href="https://cdn.bootcss.com/semantic-ui/2.2.14/semantic.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="/css/site.css" />
+
+
+</head>
+
+<body>
+  <div class="flip-container">
+    <div class="flipper">
+      <section class="front">
+        
+<nav class="ui top secondary menu">
+  <div class="item">
+    <i class="inverted big link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <a href="/">
+      <i class="inverted big link home icon" title="Home"></i>
+    </a>
+  </div>
+</nav>
+ 
+<div class="ui centered grid">
+  <div class="fifteen wide mobile fifteen wide tablet eleven wide computer column post-list post-single-main">
+
+    <section class="ui secondary top attached black segment">
+      <a class="ui black right corner label" href="javascript:void(0)" onclick="savePostAsImg()">
+        <i class="save icon"></i>
+      </a>
+      <header>
+        <h1 class="ui header">
+          The Knights of Programming Paradigms
+          <div class="sub header">@ Sarah Christoff · Nov 4, 2017 · 6 min read · Update at Nov 4, 2017</div>
+        </h1>
+      </header>
+      <article class="post-content" style="margin-top: 2rem; font-size: 1.4rem;"><p>Currently Reading: Site Reliability Engineering, Clean Architecture
+In my current struggle to learn programming, I&rsquo;m trying to learn the different paradigms of programming there are. So far, we have:
+Structured Programming, Object Orientated Programming, Functional Programming, Procedural Programing.
+Let&rsquo;s start from the top:
+Structured Programming
+&ldquo;The art of programming is the art of organizing complexity, of mastering multitude and avoiding its bastard chaos as effectively as possible.&ldquo; - Edsger Dijkstra
+Edsger Wybe Dijkstra was a programmer in the 1950s from the Netherlands. He noted that programming was difficult, and due to it being so difficult there was plenty of room for error. Dijkstra was programming back when computers where vacuum tube goliaths and compiling programs could take days. In 1968, Dijkstra coined the term &ldquo;structured programming&rdquo; and published &ldquo;Go To Statements Considered Harmful&rdquo;. Dikstra&rsquo;s article caused a stir in the programming community on whether Go To statements were necessary.
+But, what is a goto statement?
+Simply put a goto statement says &ldquo;go to this pointer in memory and do what it says&rdquo;. Structured programming is against the goto statement because it can lead to &ldquo;spaghetti code&rdquo;, where a bunch of goto pointers are pointing to other pointers, making it hard to understand, and because they are not entirely needed (proven by Dijkstra).
+Dijkstra believed programming was harder than theoretical physics, and thought he was up for the challenge on making it easier. He wanted to change programming to follow the basics of mathematical proof. He began testing.
+During his testing he found some uses of goto would not allow him to take his divide-and-conquer approach to using proof, but there were &ldquo;good&rdquo; uses of goto that were used like &ldquo;if/then/else&rdquo; and &ldquo;do/while&rdquo; that would allow him to chop up programs into smaller, more easily understandable blocks.
+(Pictured: Control Methods)
+Two years before, Böhm and Jacopini proved that all programs can be made of three things: sequence, selection, and iteration. With Dijkstra&rsquo;s knowledge, they found that the same control structures that Böhm and Jacopini proved, were the same as Dijkstra&rsquo;s.
+Where is structured programming today?
+Dijkstra&rsquo;s article started a debate in the programming community, and ultimately as programming matured the &lsquo;goto&rsquo; statement died out, or it&rsquo;s not as uncontrolled as it once was. Structured programming never caught on, but it&rsquo;s methodology is useful today. Breaking your code up into smaller modules, and attempting to prove the presence of bugs is core values of structured programming.
+Object Orientated Programming
+SmallTalk was the first object orientated programming language that was created in the 1970s by XEROX. Alan Turk is noted as a creator of SmallTalk, and put together the definitive idea of Object Orientated Programming (OOP) in the 1970s as well. OOP has many concepts that it is based upon, but we&rsquo;ll focus on: object, class, abstraction, encapsulation, inheritance, and polymorphism.
+Object: This is an instance of a class that contains certain methods and properties to make data achieve a certain state.
+Class: A class is a template on how to build a specific object.
+Abstraction: This is when you simplify complex things, such as a TV remote abstracts the complexity of the inner workings of a TV and lets you control the TV through a simple interface (the remote). In programming this can be done through objects, classes, and variables.
+Encapsulation: Encapsulation takes fields within a private class and makes them accessible through public classes. Wait.. what? Encapsulation is the mechanism that takes code and the data it manipulates and binds it together to make sure nothing bad happens to it. Encapsulation is put into place through Access Methods (public, private, protected).
+(Pictured: Inheritance)
+Inheritance: This gives the ability to create classes derived off other classes. For example, you may have a base class (parent class) that has attributes that all subclasses (child class) may have, but each individual subclass may have even more attributes that are unique to each subclass.
+Polymorphism: Polymorphism is a key concept of OOP, even though it is available in other languages, OOP made polymorphism &ldquo;safe&rdquo;. Polymorphism lets programmers use the same words to call up different things. In Java, this can be method overloading or method overriding. Method overloading allows for a single method to work in different ways depending on the arguments passed to it, and method overriding allows a method to be invoked differently on whether it is an object in the parent class or child class.
+Where is OOP today?
+OOP is all around, from SmallTalk, to Java, Python, and more! Object Orientated Programming focuses on the creation of objects and making them interact with one other. It is thought to be the way to convert the &ldquo;real world&rdquo; to programming.
+Functional Programming
+Functional Programming originated from Lambda Calculus, and is said to have came to life sometime in the 1930s. Functional programming avoids changing state and is uses expressions or declarations versus statements.
+Expressions vs Statements
+An expression evaluates something, such as:
+y = m + 1
+Where a statement does something
+print y
+Not changing a variables state eliminates many problems that mutation does. No more race conditions or concurrent update problem! One of functional programming&rsquo;s key goals is to minimize the amount of side effects a program may occur.
+What is a side effect?
+A side-effect is changing any kind of state, like changing a variable. As stated before, in functional programming variables do not change state. If we reduce the amount of side effects that could occur then we can easily predict the behavior of a program. Functional programming is about writing pure functions, which are idempotent and have no side effects.
+Where is Functional Programming today?
+Functional Programming is mainly found in academia, but is supported by Common Lisp, Haskell, Clojure, and JavaScript.
+Procedural Programming
+Procedural Programming uses a series of steps to be carried out from top to bottom. Processors provide hardware support for procedural programming through a stack register, which keeps track of active subroutines of a program.
+Procedural Programming takes statements and structures them into procedures. Procedure calls are bound by scope, which are the permissions or visibility something has. A procedure is made of modules, which is made to be a small task or execute one aspect of the function, so that it can be removed or changed with ease. Programs can contain multiple levels and scopes.
+Blocks and Scopes
+Procedural programming is a block-structured language, which allows a group of statements to be treated as if it were one statement. Each block sets a new scope where variables can be defined and interact with other variables from within that block. Variables in enclosing scopes can interact with one other, but are hidden otherwise.
+This is called Lexical Scoping or Static Scoping.
+Where is Procedural Programming today?
+Procedural Programming is implemented in Golang, C, Fortran, and COBOL. If done properly procedural programming is easy to read, flexible, and easy to maintain if divide into small functions.
+If anyone has any books or more information on Procedural Programming, I would love to read it. Finding information online was surprisingly difficult.
+There are more paradigms then what I covered, but these are the most interesting to me. Also, if I covered the rest I would lose my mind. For now, I must get back to my projects and recovering from this second surgery.
+Current Questions: What are the difference between a type 1, 2, 3 Hypervisor (and why can&rsquo;t I understand it?), why does everyone like Heroku so much, and what is Internet of Things (is it everything?)</p>
+</article>
+    </section>
+
+    <footer class="ui secondary attached segment dream-tags">
+      
+      <span>No Tag</span>
+      
+    </footer>
+
+    
+
+    
+
+  </div>
+  <div class="fifteen wide mobile fifteen wide tablet four wide computer column">
+
+    <section class="ui top attached center aligned inverted segment">
+  <div class="ui small circular image">
+    
+    <img src="/img/me.png">
+    
+  </div>
+  <h3 class="ui header">Sarah Christoff&#39;s blog<div class="sub header" style="color: white;">Breaking Things and Learning Fast</div>
+  </h3>
+
+  <div class="ui inverted horizontal list">
+    
+    <a class="item" href="/post">
+      <i class="archive icon" title="Archives"></i>
+    </a>
+    
+    <a class="item" href="/tags">
+      <i class="tags icon" title="All Tags"></i>
+    </a>
+    <a class="item" href="/categories">
+      <i class="inverted cubes icon" title="All Categories"></i>
+    </a>
+  </div>
+
+  <a id="tag-category-pop" class="ui red right corner label">
+    <i class="pointing down icon" title="Click this to pop tags and categories"></i>
+  </a>
+</section>
+
+
+
+
+
+<section class="ui bottom attached center aligned inverted segment">
+    
+    <p>© 2017 - 2018 Cat on a Computer</p>
+    
+    <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+</section>
+
+
+  </div>
+</div>
+
+      </section>
+      <section class="back">
+        <nav class="ui top secondary menu" style="overflow-x: auto">
+  <div class="item">
+    <i class="inverted big link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  
+  <div class="item">
+    <a href="mailto:sarah.christoff13@gmail.com">
+      <i class="inverted big mail icon" title="email"></i>
+    </a>
+  </div>
+  
+  
+  <div class="item">
+    <a href="https://github.com/s-christoff" target="_blank">
+      <i class="inverted big github icon" title="github"></i>
+    </a>
+  </div>
+  
+  
+  <div class="item">
+    <a href="https://www.linkedin.com/in/sarahchristoff25" target="_blank">
+      <i class="inverted big linkedin icon" title="linkedin"></i>
+    </a>
+  </div>
+  
+  
+  
+</nav>
+
+<div class="ui centered grid about">
+  <div class="fifteen wide mobile fifteen wide tablet fifteen wide computer column">
+
+    <section class="ui stacked segments">
+      <header class="ui inverted segment">
+        <h2 class="ui header">
+          AboutMe
+        </h2>
+      </header>
+
+      <article class="ui inverted segment back-about">
+        <div class="ui stackable three column grid">
+          <div class="column">
+              
+              <br>
+<h2> <font color="grey"><i>Some-Type-A</i></font> Systems Engineer </h2>
+<body> You can find me running through the convention center halls, or hidden in the back corners of a coffee shop piled under empty cups. <br>
+This blog&rsquo;s purpose is meant to aide me in the creation of talks, understanding and investigating the subject matter, and general exploration. If there&rsquo;s anything you&rsquo;d love to see here, let me know!  </body>
+              
+          </div>
+          <div class="column">
+              
+              <br>
+<br>
+<br>
+<br>
+<br>
+<h1><img src="img/catonaheader.jpg" height="110%"></h1>
+              
+          </div>
+          <div class="column">
+              
+              <p><h2> Talks </h2>
+<body> Feel free to reach out via e-mail if you think I would be a good speaker for a convention! </body><br>
+<h3> HashiConf 2018 </h3>
+<body> <b>Title: You. Must. Build. A. Raft </b> <br>
+<h2><a href = ../slides/youmustbuildaraft.pdf> Slides </a> <h2> <br>
+<i>Abstract:</i> Consensus is a fundamental problem in our distributed systems to achieve system reliability. Raft sets out to solve this problem, in a different approach then the first solution, Paxos. But how does Raft make this decisions, and why should anyone trust it? Come join us in breaking down and understanding Raft! </body></p>
+
+<p><h3><a href = "https://www.youtube.com/watch?v=ZHYFDV3XKQ4"> KubeCon &amp; Cloud Native Con EU 2018 </a></h3><br>
+<body><b> Title:  You Ever Wonder Why We&rsquo;re Here? </b><br>
+<h2><a href = ../slides/youeverwonderwhywerehere.pdf> Slides </a> <h2> <br>
+<i>Abstract:</i> Let&rsquo;s journey back to the 1960s, and start with the beginning of Virtual Machines. Why were these old behemoths made, and how do they work again? Let&rsquo;s recall when to use Virtual Machines, and their best practices. Then we&rsquo;ll travel to the dawn of containers, exploring their conception, birth, and where we are today. Finally, wrapping things up with figuring out why were are here, right now, at KubeCon! We&rsquo;ll unwrap Container Orchestration, container runtimes, and the many acronyms buzzing around.</body></p>
+
+<p><h3> Container World 2018</h3>
+<body> <b> Title:  From the Beginning: Hypervisors, Virtual Machines, and Containers </b><br>
+<i> Abstract: </i> Containers are nothing new to the industry, but it&rsquo;s surge in popularity have many engineers questioning the best use cases for virtual machines and containers. It&rsquo;s hard to figure out what is best for your application without understanding what the strengths of these technologies are. It&rsquo;s time to break down the barriers and understand containers, the difference between rkt and Docker, and all the acronyms buzzing through the community right now. Let&rsquo;s learn about the why&rsquo;s and whens to use virtual machines, containers, or both! </body></p>
+
+              
+          </div>
+        </div>
+      </article>
+
+      
+
+      
+      
+    </section>
+
+  </div>
+</div>
+
+      </section>
+    </div>
+  </div>
+
+  
+<script src="/js/jquery.min.js"></script>
+<script src="/js/semantic.min.js"></script>
+<script src="/js/html2canvas.min.js"></script>
+<script src="/js/bg.js"></script>
+<script src="/js/site.js"></script>
+
+
+
+</body>
+
+</html>

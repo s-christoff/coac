@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on Cat on a Computer</title>
+    <link>/about/</link>
+    <description>Recent content in Abouts on Cat on a Computer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/about/desc-center/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/desc-center/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/about/desc-right/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/desc-right/</guid>
+      <description>Talks   Feel free to reach out via e-mail if you think I would be a good speaker for a convention! 
+ HashiConf 2018   Title: You. Must. Build. A. Raft  Slides   Abstract: Consensus is a fundamental problem in our distributed systems to achieve system reliability. Raft sets out to solve this problem, in a different approach then the first solution, Paxos. But how does Raft make this decisions, and why should anyone trust it?</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/about/desc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/desc/</guid>
+      <description>Some-Type-A Systems Engineer   You can find me running through the convention center halls, or hidden in the back corners of a coffee shop piled under empty cups. This blog&amp;rsquo;s purpose is meant to aide me in the creation of talks, understanding and investigating the subject matter, and general exploration. If there&amp;rsquo;s anything you&amp;rsquo;d love to see here, let me know!</description>
+    </item>
+    
+  </channel>
+</rss>
