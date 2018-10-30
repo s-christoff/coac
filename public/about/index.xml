@@ -26,7 +26,7 @@
       
       <guid>/about/desc-right/</guid>
       <description>Talks   Feel free to reach out via e-mail if you think I would be a good speaker for a convention! 
- HashiConf 2018   Title: You. Must. Build. A. Raft  Slides   Abstract: Consensus is a fundamental problem in our distributed systems to achieve system reliability. Raft sets out to solve this problem, in a different approach then the first solution, Paxos. But how does Raft make this decisions, and why should anyone trust it?</description>
+ Dockercon EU 2018    Title: Wisdom From the OpsFathers with Sarah Christoff and Moustapha Gueye    Abstract:  Distributed infrastructure is necessary with the growing demands in our everyday applications. But with distributed infrastructure comes distributed problems, and the additional complexity these systems add onto our systems teams make them pull their hair out.</description>
     </item>
     
     <item>
