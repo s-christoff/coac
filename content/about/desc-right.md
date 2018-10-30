@@ -1,5 +1,13 @@
 <h2> Talks </h2>
 <body> Feel free to reach out via e-mail if you think I would be a good speaker for a convention! </body><br>
+
+<h3> Dockercon EU 2018 </h3>
+<body> <b> Title: Wisdom From the OpsFathers with <a href= "https://www.linkedin.com/in/moustapha-gueye-39a3a77a/"> Moustapha Gueye </a> <b> <br>
+<i> Abstract: </i> Distributed infrastructure is necessary with the growing demands in our everyday applications. But with distributed infrastructure comes distributed problems, and the additional complexity these systems add onto our systems teams make them pull their hair out. 
+
+This talk covers the evolving approaches to operations for container infrastructure. Using real-world examples from Swarm and Kubernetes, let's uncover outages that others have had. We can learn from them, and take these lessons learned into our own systems going forward.
+</body> 
+
 <h3> HashiConf 2018 </h3>
 <body> <b>  <a href = ../slides/youeverwonderwhywerehere.pdf> Title: You. Must. Build. A. Raft </a> </b> <br>
 <i>Abstract:</i> Consensus is a fundamental problem in our distributed systems to achieve system reliability. Raft sets out to solve this problem, in a different approach then the first solution, Paxos. But how does Raft make this decisions, and why should anyone trust it? Come join us in breaking down and understanding Raft! </body>
