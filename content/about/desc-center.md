@@ -4,5 +4,5 @@
 <br>
 <br>
 <br>
-<h1><img src="img/sticker.png"></h1>
+<h1><img src="../img/sticker.png"></h1>
 
