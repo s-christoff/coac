@@ -9,7 +9,7 @@ This talk covers the evolving approaches to operations for container infrastruct
 </body> 
 
 <h3> <a href = "https://www.youtube.com/watch?v=Hm_m4MIXn9Q"> HashiConf 2018 </a></h3>
-<body> <b>  <a href = ../slides/youeverwonderwhywerehere.pdf> Title: You. Must. Build. A. Raft </a> </b> <br>
+<body> <b>  <a href = ../slides/youmustbuildaraft.pdf> Title: You. Must. Build. A. Raft </a> </b> <br>
 <i>Abstract:</i> Consensus is a fundamental problem in our distributed systems to achieve system reliability. Raft sets out to solve this problem, in a different approach then the first solution, Paxos. But how does Raft make this decisions, and why should anyone trust it? Come join us in breaking down and understanding Raft! </body>
 
 

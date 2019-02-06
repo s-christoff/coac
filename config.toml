@@ -23,3 +23,10 @@ enableRobotsTXT = true
   paginate = 10
 
  favicon = "/img/catonacomplogo.png"
+
+
+ [imaging]
+ # Trying to do some imaging stuff to make the site faster
+  resampleFilter = "box"
+  quality = 50
+  anchor = "smart"
