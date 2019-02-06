@@ -1,4 +1,4 @@
-baseURL = "http://catonacomputer.com"
+baseURL = "https://catonacomputer.com"
 languageCode = "en-us"
 title = "Cat on a Computer"
 theme = "dream"
