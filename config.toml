@@ -1,7 +1,7 @@
-baseURL = ""
+baseURL = "http://catonacomputer.com"
 languageCode = "en-us"
 title = "Cat on a Computer"
-theme = "hugo-theme-dream"
+theme = "dream"
 googleAnalytics = "UA-105587017-1"
 enableRobotsTXT = true
 
